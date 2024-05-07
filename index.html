@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">SAM Electronics Gadgets</h1>
+        <nav class="navigation">
+            <a href="/" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact Us</a>
+            <a href="#" class="nav-link">Login</a>
+            <a href="#" class="nav-link">Signup</a>
+        </nav>
+    </header>
+
+    <div class="header-slide">
+        <h2 class="header-text">Explore Products, We brought wide range of Electronics Gadgets with Amazing Price....!</h2>
+    </div>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Mobile')">Mobile</button>
+        <button class="tablinks" onclick="openTab(event, 'Earphones')">Earphones</button>
+        <button class="tablinks" onclick="openTab(event, 'Headphones')">Headphones</button>
+        <button class="tablinks" onclick="openTab(event, 'Adopter')">Adopter</button>
+        <button class="tablinks" onclick="openTab(event, 'Cable')">Cable</button>
+        <button class="tablinks" onclick="openTab(event, 'Batteries')">Batteries</button>
+    </div>
+    
+    <!-- Product Cards Tab -->
+    <div id="Mobile" class="tabcontent">
+        <h2>Mobile Products</h2>
+        <div id="product-card-container">
+            <!-- Product Cards will be dynamically generated here -->
+            <div class="product-card">
+                <img src="mobile_image.jpg" alt="Mobile">
+                <h3>Sample Mobile Product</h3>
+            </div>
+            <!-- Add more dummy product cards here -->
+        </div>
+    </div>
+
+    <div id="Earphones" class="tabcontent">
+        <h2>Earphones Products</h2>
+        <!-- Add similar content for Earphones -->
+    </div>
+
+    <!-- Add tab content for other categories similarly -->
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
